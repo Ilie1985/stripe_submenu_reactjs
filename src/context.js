@@ -7,7 +7,7 @@ const AppContext = React.createContext();
   const [isSideBarOpen, setIsSideBarOpen] = useState(true);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(true);
 
-  const hideSideBar = () => {
+  const closeSideBar = () => {
     setIsSideBarOpen(false);
   };
 
@@ -15,7 +15,7 @@ const AppContext = React.createContext();
     setIsSideBarOpen(true);
   };
 
-  const hideSubMenu = () => {
+  const closeSubMenu = () => {
     setIsSubMenuOpen(false);
   };
 
@@ -28,9 +28,9 @@ const AppContext = React.createContext();
       value={{
         isSideBarOpen,
         isSubMenuOpen,
-        hideSideBar,
+        closeSideBar,
         openSideBar,
-        hideSubMenu,
+        closeSubMenu,
         openSubMenu,
       }}
     >
