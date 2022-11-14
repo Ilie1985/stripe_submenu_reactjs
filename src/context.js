@@ -4,30 +4,30 @@ import sublinks from "./data";
 const AppContext = React.createContext();
 
  export const AppProvider = ({ children }) => {
-  const [showSideBar, setShowSideBar] = useState(true);
-  const [showSubMenu, setShowSubMenu] = useState(true);
+  const [isSideBarOpen, setIsSideBarOpen] = useState(true);
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(true);
 
   const hideSideBar = () => {
-    setShowSideBar(false);
+    setIsSideBarOpen(false);
   };
 
   const openSideBar = () => {
-    setShowSideBar(true);
+    setIsSideBarOpen(true);
   };
 
   const hideSubMenu = () => {
-    setShowSubMenu(false);
+    setIsSubMenuOpen(false);
   };
 
   const openSubMenu = () => {
-    setShowSubMenu(true);
+    setIsSubMenuOpen(true);
   };
 
   return (
     <AppContext.Provider
       value={{
-        showSideBar,
-        showSubMenu,
+        isSideBarOpen,
+        isSubMenuOpen,
         hideSideBar,
         openSideBar,
         hideSubMenu,
